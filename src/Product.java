@@ -38,7 +38,7 @@ public class Product implements IDedObject {
 
     @Override
     public int getID() {
-        return ID;
+        return productID;
     }
 
     @Override

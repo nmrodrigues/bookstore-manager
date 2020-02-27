@@ -40,7 +40,7 @@ public class Main {
                 case 2:
                     System.out.println("ID No: ");
                     int IDtoFind = scanner.nextInt(); // get the ID number
-                    // productLinkedList.findID(IDtoFind); // find node with ID
+                    System.out.println(productLinkedList.findID(IDtoFind)); // find node with ID
                     break;
                 case 3:
                     Product productToInsert = new Product(); // creates product to insert
@@ -64,7 +64,9 @@ public class Main {
                     int IDtoDelete = scanner.nextInt();
                     Product productToDelete = new Product();
                     productToDelete.setProductID(IDtoDelete);
-                    System.out.println(productLinkedList.delete(productToDelete.getID())); // delete item with the ID
+                //    System.out.println(productLinkedList.delete(productToDelete.getID())); // delete item with the ID
+                    System.out.println(productLinkedList.delete(IDtoDelete)); // delete item with the ID
+
                     break;
                 case 6:
                     productLinkedList.printAllRecords(productLinkedList.head); // print the linked list

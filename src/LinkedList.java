@@ -102,15 +102,7 @@ public class LinkedList<AnyType extends IDedObject> {
         }
 
     }
-/*    @Override
-    public int getID() {
-        return ID;
-    }
 
-    @Override
-    public void printID() {
-        System.out.println(ID);
-    }*/
 }
 
 
