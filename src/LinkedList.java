@@ -1,25 +1,56 @@
 public class LinkedList<AnyType extends IDedObject> {
-    Node head = null;
+    private static class Node<AnyType> {
+        private AnyType payload;
+        private Node nextPointer;
+
+        public Node() {
+            payload = null;
+            nextPointer = null;
+        }
+
+        public Node(AnyType d) {
+            payload = d;
+            nextPointer = null;
+
+        }
+
+        AnyType getPayload() {
+            return payload;
+        }
+
+        public void setPayload(AnyType payload) {
+            this.payload = payload;
+        }
+
+        Node<AnyType> getNextPointer() {
+            return nextPointer;
+        }
+
+        public void setNextPointer(Node nextPointer) {
+            this.nextPointer = nextPointer;
+        }
+    }
+
+    Node<AnyType> head = null;
 
 
     void makeEmpty() {
         head = null;
     }
 
-  /* AnyType findID(int ID) {
-        Node current = head;
-        while(current != null){
-            if(current.getPayload()){
-                return current;
+    AnyType findID(int ID) {
+        for (Node<AnyType> current = head; current != null; current = current.getNextPointer()) {
+            final AnyType currentPayload = current.getPayload();
+            if (currentPayload.getID() == ID) {
+                return currentPayload;
             }
-
         }
-
-    }*/
+        return null;
+    }
 
     boolean insetAtFront(AnyType elt) {
         if (head == null) {
-            head = new Node(elt);
+            head = new Node<>(elt);
         } else {
             Node<AnyType> nodeToAdd = new Node<>(elt);
             Node<AnyType> current = head;
@@ -45,15 +76,15 @@ public class LinkedList<AnyType extends IDedObject> {
 
     AnyType delete(int ID) {
         Node<AnyType> current = head;
-        if (head.getPayload().equals(ID)) {
+        if (head.getPayload().getID() == ID) {
             return deleteFromFront();
         }
         while (current.getNextPointer() != null) {
-            if (current.getNextPointer().getPayload().equals(ID)) {
-                Node nodeToDelete = current.getNextPointer();
-                Node temp = current.getNextPointer().getNextPointer();
+            if (current.getNextPointer().getPayload().getID() == ID) {
+                Node<AnyType> nodeToDelete = current.getNextPointer();
+                Node<AnyType> temp = current.getNextPointer().getNextPointer();
                 current.setNextPointer(temp);
-                return (AnyType) nodeToDelete;
+                return nodeToDelete.getPayload();
             }
             current = current.getNextPointer();
         }
@@ -71,8 +102,6 @@ public class LinkedList<AnyType extends IDedObject> {
         }
 
     }
-
-
 /*    @Override
     public int getID() {
         return ID;
@@ -82,41 +111,9 @@ public class LinkedList<AnyType extends IDedObject> {
     public void printID() {
         System.out.println(ID);
     }*/
-
-
 }
 
-class Node<AnyType extends IDedObject> {
-    private AnyType payload;
-    private Node nextPointer;
 
-    public Node() {
-        payload = null;
-        nextPointer = null;
-    }
-
-    public Node(AnyType d) {
-        payload = d;
-        nextPointer = null;
-
-    }
-
-    AnyType getPayload() {
-        return payload;
-    }
-
-    public void setPayload(AnyType payload) {
-        this.payload = payload;
-    }
-
-    Node<AnyType> getNextPointer() {
-        return nextPointer;
-    }
-
-    public void setNextPointer(Node nextPointer) {
-        this.nextPointer = nextPointer;
-    }
-}
 
 
 
