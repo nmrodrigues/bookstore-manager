@@ -1,3 +1,7 @@
+// Nicole Rodrigues - nmr170001
+// CS 3345.006 - Satpute
+// Programming Assignment #1
+
 public class Product implements IDedObject {
     private int productID;
     private String productName;
@@ -9,7 +13,7 @@ public class Product implements IDedObject {
         this.supplierName = supplierName;
     }
 
-    public Product() {
+    public Product() { // empty constructor
     }
 
     public int getProductID() {
@@ -36,13 +40,24 @@ public class Product implements IDedObject {
         this.supplierName = supplierName;
     }
 
+
     @Override
-    public int getID() {
+    public void printProductName(){ // prints data
+        System.out.println(productName);
+    }
+
+    @Override
+    public void printSupplierName(){ // prints data
+        System.out.println(supplierName);
+    }
+
+    @Override
+    public int getID() { // get ID
         return productID;
     }
 
     @Override
-    public void printID() {
+    public void printID() { // prints data
         System.out.println(productID);
     }
 
