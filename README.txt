@@ -1,3 +1,4 @@
+# bookstore-manager
 This program is designed to work as a bookstore manager.
 
 When the program begins, a menu of options will be displayed to the user and the user will be expected to enter a choice. If the entry is not one contained in the list, an "Invalid Entry" message will be displayed and the menu will be printed again. This cycle will continue until the user has entered an acceptable entry.
