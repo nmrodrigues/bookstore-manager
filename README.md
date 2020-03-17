@@ -3,12 +3,14 @@
 ## Table of contents
 * [General info](#general-info)
 * [Structure](#structure)
+* [Menu](#menu)
 
 ## General Info
 This program is designed to work as a bookstore manager.
 
 When the program begins, a menu of options will be displayed to the user and the user will be expected to enter a choice. If the entry is not one contained in the list, an "Invalid Entry" message will be displayed and the menu will be printed again. This cycle will continue until the user has entered an acceptable entry.
 
+## Menu
 option 1 - the head node will be set to null, meaning that the entire contents of the list will be delete
 
 option 2 - prompt the user to enter the product ID number that they wish to find. The program will then traverse the LinkedList through the use of a for loop and search for the productID. If the ID is found in the list, the program will implement the functions found in the IDedObject Interface and will print the ID, Product Name, and Supplier Name. If the product was not found, then the program will display "The product was not found" to the user.
