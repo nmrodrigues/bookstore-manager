@@ -1,6 +1,4 @@
-// Nicole Rodrigues - nmr170001
-// CS 3345.006 - Satpute
-// Programming Assignment #1
+// Product class - implements IDedObject
 
 public class Product implements IDedObject {
     private int productID;

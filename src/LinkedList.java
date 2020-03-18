@@ -1,6 +1,4 @@
-// Nicole Rodrigues - nmr170001
-// CS 3345.006 - Satpute
-// Programming Assignment #1
+// Linked List with inner Node class
 
 public class LinkedList<AnyType extends IDedObject> {
     Node<AnyType> head = null; // head node

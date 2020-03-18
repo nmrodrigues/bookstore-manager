@@ -1,7 +1,5 @@
-// Nicole Rodrigues - nmr170001
-// CS 3345.006 - Satpute
-// Programming Assignment #1
-
+// Nicole Rodrigues
+// Contains test code - currently commented out
 
 import java.util.Scanner;
 
